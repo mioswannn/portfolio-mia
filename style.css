@@ -1,0 +1,451 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Nov 23, 2023, 1:20:10 PM
+    Author     : USER
+*/
+
+body{
+   margin: 0;
+   padding: 0;
+    font-family: 'Poppins', sans-serif;
+ 
+}
+
+body{
+    background: #F7C5CC;
+    color: #fff;
+    
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.container{
+    padding: 10px 10%;
+    background-position: center; 
+}
+.about_container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    padding: 50px 8%;
+}
+.imageSection{
+    grid-area: imageSect;
+    
+}
+.infoSection{
+    grid-area: infoSect;
+  
+    
+}
+.skillSelection{
+     grid-area: infoSect;
+ 
+    
+}
+.progress_bar{
+    width: 100%;
+    height: 16px;
+    background-color: #2b2a2f;
+    padding: 4px 6px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #444;
+    border-radius: 15px;
+}
+.progress_line{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #787cb5;
+    box-shadow: -1px  -1px  2px #222222,
+        1px 1px 2px #111111;
+    border-radius: 15px;
+    
+}
+.progress_line::after{
+    position: absolute;
+    content: attr(value);
+    top: -35px;
+    right: 0px;
+    transform: translateX(-50%);
+    color: #aaabb0;
+    font-size: 17px;
+}
+.about_container .about_contents{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 70px;
+    grid-template-areas: 'imageSect infoSect'
+        'skillSect skillSect';
+    
+    
+}
+.about_contents .imageSection{
+    position: relative;
+    min-width: 300px;
+    height: 380px;
+}
+.imageSection img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+.about_contents .imageSection::after{
+    position:absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    outline: 3px solid #787cb5;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+}
+.infoSection h1{
+    color:brown;
+    font-size: 30px;
+    font-family: helvetica;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+}
+.infoSection h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top:110%;
+    left: 0;
+    background-color: #aaabb0;   
+}
+.infoSection h1::after{
+    content:'';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left: 0px;
+    background-color: #787cb5;
+}
+.infoSection h2{
+    font-family: helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    padding: 14px 0px 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.infoSection p{
+    color: #333;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+    padding-bottom: 8px;
+}
+.personalInfo{
+    display: grid;
+    grid-template-colums: 1fr 1fr;
+    grid-gap: 10px 20px;
+    margin-top: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555;
+    
+    
+    
+}
+.personalInfo div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.personalInfo div span{
+   color: brown;
+    letter-spacing: 1px;
+    
+}
+.infoSection button{
+    min-width: 150px;
+    padding: 8px 18px;
+    border: 1px solid #787cb5;
+    border-radius: 25px;
+    font-size: 18px;
+    background-color: #2b2a2f;
+    color: #aaabb0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top:20px;
+    
+}
+.infoSection button{
+    color: #787cb5;
+    border-color: #aaabb0;
+}
+@media(max-width:1068px){
+    .about_cotainer .about_contents{
+        display: grid;
+        grid-template-columns: 2fr 45fr;
+        grid-gap: 70px;
+        grid-template-areas: 'imageSect skillSect'
+            'infoSect skillSect';
+    }
+}
+.skillSelection{
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+@media (max-width: 868px){
+    .about_container .about_contents{
+        grid-template-areas: 'imageSect imageSect'
+            'infoSect infoSect'
+            'skillSect skillSect';
+    }
+}
+@media (max-width: 668px){
+    .personalInfo{
+        grid-template-columns: 1fr;
+    }
+    }
+
+
+.skillSelection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 80px;
+    
+}
+.skillSelection .sub-title{
+    font-size: 17px;
+    font-weight: thin;
+    color: #aaabb0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+nav{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 20px20%;
+} 
+.ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: ' ';
+    width: 100%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover::after{
+    width: 100%;
+    
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px; 
+    padding-left: 80px
+}
+.header-text h1{
+    font-size:60px;
+    margin-top: 20px;
+    
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+
+
+
+ /*ABOUT*/
+#about{
+    margin: 10px;
+    padding: 0;
+    color: #fff;
+}
+
+body{
+    background: #F7C5CC;
+    color: #fff;
+    
+}
+.container{
+ padding: 20px30%;
+ background-position: center; 
+}
+
+nav{
+    align-items:center;
+    justify-content: space-between;
+   
+} 
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 60px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: ' ';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 10%;
+    font-size: 20px; 
+    padding-left: 60px;
+}
+
+.header-text h1{
+    font-size:50px;
+    margin-top: 20px;
+}
+                                   
+.header-text h1 span{
+    color: #ff004f;
+} 
+
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+
+.about-col-2{
+    flex-basis: 0%;
+    margin-top: 10%;
+    margin-right: 50%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    margin: 10% 40%;
+    
+}
+.services-list{
+    display: grid;
+    grid-template-collums:repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top:50px;
+    
+    
+}
+.services-list div{
+    background: #080808;
+    padding:40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #333;
+    backface-visibility: #fff;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input{
+    width: 49%;
+    
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.project .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.project .container .box{
+    flex: 1 1 30rem;
+    
+}
+    
+
+
